@@ -1,0 +1,73 @@
+#! ../yasl_linux_static
+
+!!
+//handle overf
+{
+0:0
+0:+:0
+}toINT
+
+#
+1 > ?("exactly one arg\n" print exit)
+#
+1 < ?("exactly one arg\n" print "17" exit)
+= "0" ==
+?("1\n" print 0 exit)
+= "1" ==
+?("1\n" print 0 exit)
+
+= toINT 0 <
+?("negative num\n" print exit)
+= toINT 20 >
+?("overflow\n" print exit)
+0:=:9
+{
+	1:=:1
+	1:print
+	"\n":1
+	1:print
+}	printst1
+
+{
+	2:=:2
+	2:print
+	"\n":2
+	2:print
+}	printst2
+
+
+
+toINT
+
+{
+""
++
+}toSTR
+
+toSTR
+
+0:=:9 9:!=:9
+9:?
+("invalid input\n":0 0:print 0 0:exit)
+
+toINT
+= 0 ==
+?("1\n" print exit)
+
+1:3
+0:=:1
+{
+//END IF 0 HERE
+
+3:=:0
+0:-:0
+0:=:1
+1:*:1  		//[3]      [12]
+
+1:2
+0:=:2
+2:!=:2
+2:%?(recur):(1:print "\n":0 0:print exit)
+}	recur
+
+recur

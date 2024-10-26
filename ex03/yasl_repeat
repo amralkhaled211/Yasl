@@ -1,0 +1,47 @@
+#! ../yasl_linux_static
+
+!!
+
+{
+0 
++
+}toINT
+
+{
+""
++
+}toSTR
+
+0:=:6
+toINT
+toSTR
+0:=:6
+6:!=:6
+6:?("first arg is not int\n":8 8:print 18:8 8:exit)
+
+
+
+0:#:9 2:9 9:<:9 9:? ( "not enough args\n":9  9:print  17:9  9:exit)
+//check first is int
+
+
+= "0" ==
+?("ZERO\n" print 0 exit)
+= toINT 0 <
+?("negative num\n" print exit)
+
+
+0:0
+0:+:1
+#:0
+{
+	1:=:2
+	1:#(0:=:3 0:! 3:=:3 3:print 3:=:0)
+	"\n":3
+	3:print
+	0:!
+	1:2
+	2:+:1
+}printl
+
+#printl
